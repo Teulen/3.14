@@ -1,6 +1,9 @@
 'use client'
 import Image from 'next/image'
 import React, { useState } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebookF , faTwitter , faInstagram , faYoutube} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
@@ -16,9 +19,12 @@ export default function Footer() {
             <div className='h-0.5 w-full bg-gradient-to-r from-purple-600 to-indigo-600'></div>
             <div className='w-full h-1/2 flex justify-between'>
                 <div className='text-sm font-light'>©2020 - Powered by MobiFinance. All rights reserved.</div>
-                <div className=''>
-                    {/* Logonuud fontawesome holbood oruulah */}
-                </div>
+                  <div className='h-full gap-8'>
+                    <FontAwesomeIcon icon={faFacebookF} style={{width: '30px', height: '30px'}} className='ml-4 cursor-pointer'/>
+                    <FontAwesomeIcon icon={faTwitter} style={{width: '30px', height: '30px'}} className='ml-4 cursor-pointer'/>
+                    <FontAwesomeIcon icon={faInstagram} style={{width: '30px', height: '30px'}} className='ml-4 cursor-pointer'/>
+                    <FontAwesomeIcon icon={faYoutube} style={{width: '30px', height: '30px'}} className='ml-4 cursor-pointer'/>
+                  </div>
             </div>
        </div>
     </div>
